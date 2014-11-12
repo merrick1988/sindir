@@ -1,0 +1,21 @@
+/* toggle animation*/
+
+.toggle-animation {
+  @include transition (all 0.3s linear);
+}
+
+.toggle-animation.ng-hide {
+  opacity: 0;
+}
+
+/* slide animation*/
+
+.slide-animation{
+  @include transition (right 0.2s  linear);
+}
+.slide-animation.ng-hide {
+  right: 100%;
+}
+.slide-animation.ng-show{
+  right: 20%;
+}

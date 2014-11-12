@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/vendor/jquery-mobile/jquery-mobile.css" />
+    <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
+    <link rel="stylesheet" href="style-app.css"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="scripts-vendor.js"></script>
+</head>
+<body>
+
+<div class="sidebar" data-role="panel" id="sidebar" data-display="overlay">
+    <div class="sidebar__header"></div>
+    <ul class="sidebar__menu">
+        <li class="sidebar__item">
+            <i class="fa fa-cog sidebar__icon"></i>
+            <span class="sidebar__text">
+                <span>Settings </span>
+                <span class="sidebar__text--info"> Lorem ipsum dolor sit amet</span>
+            </span>
+        </li>
+        <li class="sidebar__item">
+            <i class="fa fa-certificate sidebar__icon"></i>
+            <span class="sidebar__text">
+                <span>Preferences </span>
+                <span class="sidebar__text--info"> Lorem ipsum dolor sit amet</span>
+            </span>
+        </li>
+        <li class="sidebar__item">
+            <i class="fa fa-paper-plane sidebar__icon"></i>
+            <span class="sidebar__text">
+                <span>Contact Us </span>
+                <span class="sidebar__text--info"> Lorem ipsum dolor sit amet</span>
+            </span>
+        </li>
+    </ul>
+</div>
+
+<div data-role="header" id="header" data-position="fixed">
+    <nav data-role="navbar">
+        <a class="nav__item nav__item--menu" href="#sidebar">
+            <i class="fa fa-bars nav__icon nav__icon--small"></i>
+        </a>
+        <span class="nav__item" data-link="pictures" onclick="menu.navigateTo('0', event)">
+            <i class="fa fa-globe nav__icon"></i>
+            <span class="nav__item__line"></span>
+        </span>
+        <span class="nav__item" data-link="messages" onclick="menu.navigateTo('1', event)">
+            <i class="fa fa-comments-o nav__icon"></i>
+            <span class="nav__item__line"></span>
+        </span>
+        <span class="nav__item" data-link="news" onclick="menu.navigateTo('2', event)">
+            <i class="fa fa-camera nav__icon"></i>
+            <span class="nav__item__line"></span>
+        </span>
+    </nav>
+</div>
+
+<div data-role="page" id="pictures" data-title="Pictures" class="page" data-page-index="0">
+    <div role="main">
+        <span class="text-empty">There's no pictures</span>
+    </div>
+</div>
+
+<div data-role="page" id="messages" data-title="Messages" class="page" data-page-index="1">
+    <div role="main">
+        <span class="text-empty">There's no messages</span>
+    </div>
+</div>
+
+<div data-role="page" id="news" data-title="News" class="page" data-page-index="2">
+    <div role="main">
+        <span class="text-empty">There's no news</span>
+    </div>
+</div>
+
+<script src="scripts-app.js"></script>
+
+</body>
+</html>
