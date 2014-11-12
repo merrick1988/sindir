@@ -1,14 +1,13 @@
 $(function () {
     window.menu = new Menu();
 
-    $(document).on("pageinit", function () {
-        $("#sidebar").panel();
-        $("[data-role='header']").toolbar();
-    });
+    $("#sidebar").panel();
+    $("[data-role='header']").toolbar();
 
-    $(document).on("pageshow", function () {
+    setTimeout(function () {
         menu.setActiveMenuItem();
-    });
+    }, 100);
+
 
     $( document ).on( "swipeleft", ".ui-page", function( event ) {
         menu.nextPage(event);

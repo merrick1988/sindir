@@ -4,6 +4,7 @@
     window.Menu = function() {
 
         var activeMenuClass = "nav__item--active",
+            indicatorClass = ".nav__line__indicator",
             navItems = $(document).find('nav[data-role="navbar"] .nav__item'),
             setActiveMenuItem;
 
@@ -15,6 +16,9 @@
 
                 if ($(this).attr('data-link') == activeItem) {
                     $(this).addClass(activeMenuClass);
+
+                    $(indicatorClass).offset({left: parseInt($(this).offset().left)});
+                    $(indicatorClass).width(parseInt($(this).outerWidth()));
                 }
             });
         };
@@ -48,14 +52,17 @@
         };
 
         this.navigateTo = function (pageIndex) {
-            event.preventDefault();
-            if ($.mobile.activePage.attr('data-page-index') < pageIndex) {
-                this.nextPage(event);
-            } else {
-                this.prevPage(event);
+            var page;
+
+            if (event.handled !== true) {
+                page = $.mobile.activePage.parent().find('[data-page-index="' + pageIndex + '"]');
+                if (page.length > 0) {
+                    $.mobile.changePage(page, {transition: "slide", reverse: true}, true, true);
+                    this.setActiveMenuItem();
+                }
+                event.handled = true;
             }
-
-
+            return false;
         };
 
         return this;

@@ -20,6 +20,7 @@ nav{
   display: inline-block;
   vertical-align: middle;
   text-align: center;
+  transition: color 0.5s ease-in-out;
 
   &.nav__item--menu {
     margin-left: -5px;
@@ -29,9 +30,6 @@ nav{
 
   &.nav__item--active{
     color: $color-orange;
-    .nav__item__line{
-      display: inline-block;
-    }
   }
 }
 
@@ -50,16 +48,13 @@ nav{
   display: block;
   height: $nav-line-height;
   margin-top: -$nav-line-height;
+  position: relative;
 }
 
-.nav__item__line{
+.nav__line__indicator{
   @include border-top-radius($nav-line-height - 1);
-  position: absolute;
-  display: none;
-  width: 100%;
+  @include position(absolute, 0 auto 0 auto);
+  @include transition(all 0.3s ease-in-out);
   background: $color-orange;
-  height: $nav-line-height;
-  bottom: -8px;
-  left: 0;
 }
 

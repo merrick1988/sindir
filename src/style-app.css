@@ -2294,6 +2294,7 @@ nav {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
+  transition: color 0.5s ease-in-out;
 }
 .nav__item.nav__item--menu,
 .nav__item:hover.nav__item--menu {
@@ -2304,10 +2305,6 @@ nav {
 .nav__item.nav__item--active,
 .nav__item:hover.nav__item--active {
   color: #fc511d;
-}
-.nav__item.nav__item--active .nav__item__line,
-.nav__item:hover.nav__item--active .nav__item__line {
-  display: inline-block;
 }
 
 .nav__icon {
@@ -2329,18 +2326,21 @@ nav {
   display: block;
   height: 3px;
   margin-top: -3px;
+  position: relative;
 }
 
-.nav__item__line {
+.nav__line__indicator {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   position: absolute;
-  display: none;
-  width: 100%;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   background: #fc511d;
-  height: 3px;
-  bottom: -8px;
-  left: 0;
 }
 
 .sidebar {
