@@ -2343,6 +2343,28 @@ nav {
   background: #fc511d;
 }
 
+.pictures-swipe {
+  padding-top: 75px;
+}
+
+.pictures-swipe--loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -55px;
+  margin-left: -55px;
+  height: 110px;
+  width: 110px;
+  text-align: center;
+  display: table;
+  vertical-align: middle;
+}
+
+.pictures-swipe--loading-icon {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .sidebar {
   background: white;
 }
@@ -2429,4 +2451,13 @@ nav {
   overflow: visible !important;
   outline: 0 !important;
   border: none !important;
+}
+
+.user-circle {
+  color: white;
+  background: #fc511d;
+  border-radius: 50%;
+  font-size: 4em;
+  width: 110px;
+  height: 110px;
 }

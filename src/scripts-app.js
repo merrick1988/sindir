@@ -1,11 +1,13 @@
 $(function () {
     window.menu = new Menu();
+    window.picturesSwipe = new PicturesSwipe();
 
     $("#sidebar").panel();
     $("[data-role='header']").toolbar();
 
     setTimeout(function () {
         menu.setActiveMenuItem();
+        picturesSwipe.getPictures();
     }, 100);
 
 
@@ -84,6 +86,35 @@ $(function () {
                 event.handled = true;
             }
             return false;
+        };
+
+        return this;
+    }
+})();
+(function () {
+    "use strict";
+
+    window.PicturesSwipe = function() {
+
+        var loadingPicturesClass = ".pictures-swipe--loading",
+            picturesListClass = ".pictures-swipe__list",
+            picturesSwipeLoading = false,
+            picturesURL = "";
+
+        this.getPictures = function(){
+            var $loadingPicturesBox = $(loadingPicturesClass),
+                $picturesListBox = $(picturesListClass);
+
+            if (!picturesSwipeLoading) {
+                picturesSwipeLoading = true;
+                $picturesListBox.hide();
+                $loadingPicturesBox.show();
+                setTimeout(function(){
+                    picturesSwipeLoading = false;
+                    $loadingPicturesBox.hide();
+                    $picturesListBox.show();
+                }, 500000)
+            }
         };
 
         return this;

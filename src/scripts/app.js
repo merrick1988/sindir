@@ -1,11 +1,13 @@
 $(function () {
     window.menu = new Menu();
+    window.picturesSwipe = new PicturesSwipe();
 
     $("#sidebar").panel();
     $("[data-role='header']").toolbar();
 
     setTimeout(function () {
         menu.setActiveMenuItem();
+        picturesSwipe.getPictures();
     }, 100);
 
 

@@ -4,7 +4,6 @@
     <title>Tinder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles/vendor/jquery-mobile/jquery-mobile.css" />
-    <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
     <link rel="stylesheet" href="style-app.css"/>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -60,8 +59,17 @@
 </div>
 
 <div data-role="page" id="pictures" data-title="Pictures" class="page" data-page-index="0">
-    <div role="main">
-        <span class="text-empty">There's no pictures</span>
+    <div role="main" class="pictures-swipe">
+        <div class="pictures-swipe--loading">
+            <div class="user-circle pictures-swipe--loading-icon">
+                <i class="fa fa-user"></i>
+            </div>
+        </div>
+        <div class="pictures-swipe__list">
+            <div class="pictures-swipe__empty">
+                <span class="text-empty">There's no pictures</span>
+            </div>
+        </div>
     </div>
 </div>
 
