@@ -1,0 +1,18 @@
+$userCircleWidth: 100px;
+
+.user-circle{
+  color: $color-white;
+  background: $color-orange;
+  border-radius: 50%;
+  font-size: 4em;
+  width: $userCircleWidth;
+  height: $userCircleWidth;
+  display: inline-table;
+  vertical-align: middle;
+  text-align: center;
+  border: 2px solid $color-white;
+  i{
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

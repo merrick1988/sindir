@@ -59,15 +59,69 @@
 </div>
 
 <div data-role="page" id="pictures" data-title="Pictures" class="page" data-page-index="0">
-    <div role="main" class="pictures-swipe">
-        <div class="pictures-swipe--loading">
-            <div class="user-circle pictures-swipe--loading-icon">
-                <i class="fa fa-user"></i>
-            </div>
-        </div>
-        <div class="pictures-swipe__list">
-            <div class="pictures-swipe__empty">
-                <span class="text-empty">There's no pictures</span>
+    <div role="main" class="page-container">
+        <div class="pictures-container">
+            <div class="pictures-swipe__inner-container">
+                <div id="picturesSwipeLoadingId">
+                    <div class="pictures-loading__animation-container">
+                        <div class="pictures-loading__animation-item"></div>
+                        <div class="pictures-loading__animation-item"></div>
+                    </div>
+                    <div class="pictures-loading__icon">
+                        <div class="user-circle">
+                            <i class="fa fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="text-empty--bottom">
+                        <span>Looking for people near you ...</span>
+                    </div>
+                </div>
+                <div id="picturesSwipeEmptyId">
+                    <div class="user-circle">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="text-empty--bottom">
+                        <p>There's nobody near you :(</p>
+                        <p class="link" onclick="picturesSwipe.getPictures()">Try again</p>
+                    </div>
+                </div>
+                <div id="picturesSwipeErrorId">
+                    <div class="user-circle">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="text-error--bottom">
+                        <p>Sorry, we can't find anybody due to connection error</p>
+                        <p class="link" onclick="picturesSwipe.getPictures()">Try again</p>
+                    </div>
+                </div>
+                <div id="picturesSwipeListId">
+                    <div class="pictures-list">
+                        <div class="picture-box">
+                            <div class="picture">
+                                <div class="picture__image">
+                                    <img src="" alt=""/>
+                                </div>
+                                <div class="picture__text"></div>
+                            </div>
+                        </div>
+                        <div class="picture-box">
+                            <div class="picture">
+                                <div class="picture__image">
+                                    <img src="" alt=""/>
+                                </div>
+                                <div class="picture__text"></div>
+                            </div>
+                        </div>
+                        <div class="picture-box">
+                            <div class="picture">
+                                <div class="picture__image">
+                                    <img src="" alt=""/>
+                                </div>
+                                <div class="picture__text"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

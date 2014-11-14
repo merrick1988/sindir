@@ -13,7 +13,9 @@ body.ui-overlay-a{
   color: $color-almost-black;
   text-shadow: none;
 }
-
+*{
+  @include box-sizing(border-box);
+}
 
 .ui-mobile-viewport-transitioning,
 .ui-mobile-viewport-transitioning .ui-page {

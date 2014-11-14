@@ -10,6 +10,11 @@ $(function () {
         picturesSwipe.getPictures();
     }, 100);
 
+    $(document).on("pageshow","#pictures",function(){
+        setTimeout(function () {
+            picturesSwipe.getPictures();
+        }, 100);
+    });
 
     $( document ).on( "swipeleft", ".ui-page", function( event ) {
         menu.nextPage(event);

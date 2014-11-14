@@ -31,7 +31,7 @@
 
 .sidebar__icon{
   @include  fa-icon();
-  font-size: $font-size-big;
+  font-size: $font-size-double;
   display: table-cell;
   vertical-align: middle;
   padding: 0 15px;
