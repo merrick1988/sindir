@@ -2377,6 +2377,137 @@ table {
     transform: none;
   }
 }
+@-webkit-keyframes zoomInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20%, 0);
+    transform: translate3d(0, -20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@-moz-keyframes zoomInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20%, 0);
+    transform: translate3d(0, -20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes zoomInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20%, 0);
+    transform: translate3d(0, -20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.form {
+  border-top: 4px solid #fcfcfc;
+  padding: 20px;
+  margin-top: -4px;
+}
+
+.label {
+  margin-bottom: 10px !important;
+  color: #595959;
+  text-shadow: none;
+}
+
+.input {
+  color: #595959;
+  font-size: 1em;
+  padding-left: 10px !important;
+  height: 40px;
+}
+
+.input-box {
+  margin: 15px 0;
+}
+
+.input-box--picture {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 5px auto -10px;
+}
+
+.input-box--small {
+  width: 80px;
+}
+
+.ui-field-contain {
+  padding: 0 10px 10px !important;
+  margin-top: -10px;
+  border: none !important;
+  margin-bottom: 15px;
+  background: #e6e6e6;
+  z-index: 10;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.ui-field-contain .ui-controlgroup-controls {
+  display: table;
+  vertical-align: middle;
+  position: relative;
+  padding-top: 5px;
+}
+.ui-field-contain .ui-controlgroup-controls .ui-radio.ui-mini {
+  display: table-cell;
+  width: 50%;
+  float: none;
+  clear: both;
+  text-align: center;
+}
+.ui-field-contain .ui-controlgroup-controls .ui-radio.ui-mini label {
+  text-align: center;
+  border-radius: 5px;
+  text-shadow: none;
+  font-size: 16px;
+  font-weight: normal;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+}
+.ui-field-contain .ui-controlgroup-controls .ui-radio.ui-mini label.ui-btn {
+  background-color: white;
+  border: none !important;
+  color: #595959;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.ui-field-contain .ui-controlgroup-controls .ui-radio.ui-mini label.ui-btn.ui-btn-active {
+  color: white;
+  background-color: #1dc8fc;
+}
+
+.registration-box {
+  -webkit-animation: zoomInDown 0.5s ease-out;
+  -moz-animation: zoomInDown 0.5s ease-out;
+  animation: zoomInDown 0.5s ease-out;
+  background: #e6e6e6;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.ui-input-text, .ui-input-search {
+  border: none !important;
+}
+
 .link {
   color: #fc511d;
   margin: 10px;
@@ -2405,6 +2536,10 @@ body.ui-overlay-a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.hide {
+  display: none;
 }
 
 .ui-mobile-viewport-transitioning,

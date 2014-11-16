@@ -1,18 +1,21 @@
 $(function () {
     window.menu = new Menu();
     window.picturesSwipe = new PicturesSwipe();
+    window.user = new User();
 
-    $("#sidebar").panel();
-    $("[data-role='header']").toolbar();
+//    $("#sidebar").panel();
+//    $("[data-role='header']").toolbar();
 
     setTimeout(function () {
-        menu.setActiveMenuItem();
-        picturesSwipe.getPictures();
+        user.initEvents();
+//        menu.setActiveMenuItem();
+//        picturesSwipe.getPictures();
+        $( "input[type='radio']#male" ).prop( "checked", true ).checkboxradio( "refresh").trigger("change");
     }, 100);
 
     $(document).on("pageshow","#pictures",function(){
         setTimeout(function () {
-            picturesSwipe.getPictures();
+//            picturesSwipe.getPictures();
         }, 100);
     });
 

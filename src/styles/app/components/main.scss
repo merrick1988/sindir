@@ -17,6 +17,10 @@ body.ui-overlay-a{
   @include box-sizing(border-box);
 }
 
+.hide{
+  display: none;
+}
+
 .ui-mobile-viewport-transitioning,
 .ui-mobile-viewport-transitioning .ui-page {
   width: 100%;

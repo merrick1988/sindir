@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--<link rel="stylesheet" href="styles/vendor/jquery-mobile/jquery-mobile.css" />-->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style-app.css"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="scripts-vendor.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="registration" data-title="Registration" class="page" data-page-index="0">
+    <div role="main" class="page-container form">
+        <form name="registerForm">
+            <div class="ui-field-contain">
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend class="label">Select your gander</legend>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">female</label>
+                </fieldset>
+            </div>
+            <div class="registration-box hide" id="maleRegistration">
+                <div class="input-box--picture">
+                    <div class="input-upload">
+                        <div class="user-circle">
+                            <i class="fa fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="userName" class="label">Name</label>
+                    <input class="input" type="text" name="userName" id="userName" value="" data-clear-btn="true">
+                </div>
+                <div class="input-box">
+                    <label for="password" class="label">Password</label>
+                    <input class="input" type="password" name="password" id="password" value="" data-clear-btn="true">
+                </div>
+                <div class="input-box">
+                    <label for="confirmPassword" class="label">Confirm password</label>
+                    <input class="input" type="password" name="confirmPassword" id="confirmPassword" value="" data-clear-btn="true">
+                </div>
+            </div>
+            <div class="registration-box hide" id="femaleRegistration">
+                <div class="input-box">
+                    <label for="femaleFirstName" class="label">Name</label>
+                    <input class="input" type="text" name="femaleFirstName" id="femaleFirstName" value="" data-clear-btn="true">
+                </div>
+                <div class="input-box">
+                    <label for="femalePassword" class="label">Password</label>
+                    <input class="input" type="password" name="password" id="femalePassword" value="" data-clear-btn="true">
+                </div>
+                <div class="input-box">
+                    <label for="femaleConfirmPassword" class="label">Confirm password</label>
+                    <input class="input" type="password" name="confirmPassword" id="femaleConfirmPassword" value="" data-clear-btn="true">
+                </div>
+                <div class="input-box input-box--small">
+                    <label for="femaleAge" class="label">Age</label>
+                    <input class="input" type="number" pattern="[0-9]*" name="femaleAge" id="femaleAge" value="">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="scripts-app.js"></script>
+</body>
+</html>
